@@ -1,6 +1,7 @@
 package com.example.websocketstest;
 
 import com.tinder.scarlet.Stream;
+import com.tinder.scarlet.WebSocket;
 import com.tinder.scarlet.ws.Receive;
 import com.tinder.scarlet.ws.Send;
 
@@ -10,4 +11,7 @@ public interface Gabriel {
 
     @Receive
     Stream<UpdateProtos.Update> Receive();
+
+    @Receive
+    Stream<WebSocket.Event> observeWebSocketEvent();
 }
